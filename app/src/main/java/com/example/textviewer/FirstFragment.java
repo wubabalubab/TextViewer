@@ -12,6 +12,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -45,6 +46,7 @@ public class FirstFragment extends Fragment {
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
+        Toast.makeText(getContext(), "xxx", Toast.LENGTH_SHORT).show();
         settings.setBlockNetworkImage(false);
         settings.setJavaScriptEnabled(true);
         fistfargmentweb.setWebViewClient(new WebViewClient());
