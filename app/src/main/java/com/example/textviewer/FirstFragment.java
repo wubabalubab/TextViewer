@@ -20,10 +20,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import java.util.PrimitiveIterator;
 
 public class FirstFragment extends Fragment {
-
     String url="http://oa.zhenghongwy.com:8080/zhwy/ydh.html?door=02,03,05,06,07,08,10,11,12,13&id=LYxA/L8vCtbrMKNdvPtUqQ==&from=singlemessage";
-
-
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
