@@ -46,7 +46,7 @@ public class FirstFragment extends Fragment {
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
             settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
-        Toast.makeText(getContext(), "xxx", Toast.LENGTH_SHORT).show();
+
         settings.setBlockNetworkImage(false);
         settings.setJavaScriptEnabled(true);
         fistfargmentweb.setWebViewClient(new WebViewClient());
