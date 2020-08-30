@@ -2,19 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.textviewer">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/newtwork_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/newtwork_security_config"
-        >
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.bean.TranslationYdActivity"></activity>
+        <activity android:name=".TranslationActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
         <activity
             android:name=".WebActivity"
@@ -27,7 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DemoActivity"></activity>
+        <activity android:name=".DemoActivity" />
         <activity android:name="com.example.basic.BaseActivity" />
         <activity android:name=".MainActivity" />
     </application>
