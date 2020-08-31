@@ -57,6 +57,7 @@ public class TranslationActivity extends AppCompatActivity {
             public void onResponse(Call<TranslationYdActivity> call, Response<TranslationYdActivity> response) {
                 System.out.println(response.body().getTranslateResult().get(0).get(0).getTgt());
                 result = String.valueOf(response.body().getTranslateResult().get(0).get(0).getTgt());
+                textView2.setText(result);
             }
 
             @Override
@@ -93,19 +94,19 @@ public class TranslationActivity extends AppCompatActivity {
 
         input= String.valueOf(editText.getText());
         requestYd(input);
-        textView2.setText(result);
-        Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        textView2.setText(result);
-//                    }
-//                });
-//            }
-//        });
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.getResources().getColor(R.color.colorAccent);
+
+                    }
+                });
+            }
+        }).start();
 
     }
 }

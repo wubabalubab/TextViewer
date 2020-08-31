@@ -12,8 +12,8 @@ public class ItemInfo {
     public String name;
     public String description;
     public int image;
-    private static String []names={"item1","item2","item3"};
-    private static String []descriptions={"item111","22222","3333"};
+    private static String []names={"open door","translation","item3"};
+    private static String []descriptions={"open door","translation","item333"};
     private static int  []images={R.drawable.testdemo,R.drawable.testdemo,R.drawable.testdemo};
 
     public ItemInfo(String name, String description, int image) {
